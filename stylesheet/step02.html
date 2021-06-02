@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+        /*element selector*/
+        div{
+            /*
+            border-width: 1px;
+            border-style: dotted;
+            border-color: blueviolet;
+            위 3줄과 밑에 한줄이 같다.*/
+            border: 1px dotted green;
+        }
+        /*class selector*/
+        .bg-yellow{
+            background-color: greenyellow;
+        }
+        .test{
+            font-weight: bold;
+        }
+        /*id selector*/
+        #myDiv {
+            color : red;
+        }
+    /*연속으로 class를 입력할 수 있다.*/
+    </style>
+</head>
+<body>
+    <div>div1</div>
+    <div class="bg-yellow">div2</div>
+    <div class="bg-yellow">div3</div>
+    <div class="bg-yellow test">div4</div> 
+    <div id="myDiv">div5</div>
+</body>
+</html>

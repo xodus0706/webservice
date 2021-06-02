@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+        /*
+        .container{
+            background-color: aquamarine;
+        }
+        */
+        /*.container의 자손중에서 p요소 선택*/
+        
+        .container p{
+            background-color: aquamarine;
+        }
+        
+        /*.container의 자식중에서 p요소 선택//p와 div*/
+        /*
+        .container>p{
+            background-color: aquamarine;
+        }
+        */
+        /*.container의 형제중에 바로 인접한 p요소 선택 
+        //바로 인접한 것은 바로 위에 것은 해당하지 않는다.*/
+       /*
+        .container+p{
+            background-color: aquamarine;
+        }
+        */
+        /*.container의 형제중에 모든 p요소 선택*/
+        /*
+        .container~p{
+            background-color: aquamarine;
+        }*/
+        
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <div>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+    </div>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+</body>
+</html>

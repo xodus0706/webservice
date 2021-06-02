@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: powderblue;
+        }
+        ul li{
+            background-color: plum; /*가중치에 의해서 li보다 앞섰음*/
+        }
+        .active{
+            background-color: purple;/*가중치에 의해서 클래스가 ul li보다 앞섰음*/
+        }
+        li.active{
+            background-color: pink;
+        }
+        #one{   
+            background-color: salmon;/*ID가 클래스보다 앞섰음 // 인라인스타일: 문장안에 삽입이 더 앞선다.*/
+        }
+        #one{
+            background-color: cornflowerblue !important;/*그 무엇보다 앞서는 !important // inlin에 !important까지 쓰면 무엇도 앞설수 없음*/
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <ul>
+                <li class="active" id="one" style="background-color: sandybrown !important">하나</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

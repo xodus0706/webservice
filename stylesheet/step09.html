@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position(relative, fixed, absoulte)</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 5px solid rebeccapurple;
+        }
+        .spaver{
+            height: 500px;
+            background-color: aliceblue;
+        }
+        #one{/*relative는 앞 도형이 끝나는 지점부터 top y좌표, left x좌표*/
+            position: relative;
+            top: 100px;
+            left: 20px;
+            border:10px dashed pink;
+        }
+        #two{/*absolute는 무조건 왼쪽 끝 창의 시작부터 top y좌표, left x좌표*/
+            position: absolute;
+            top: 100px;
+            left: 20px;
+            border:10px dashed palegoldenrod;
+        }
+        #three{/*fixed는 스크롤이 내려도 뷰포인트 좌표유지 top y좌표, left x좌표*/
+            position: fixed;
+            top: 100px;
+            left: 500px;
+            border:10px dotted cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">static</div>
+    <div class="box" id="one">relative</div>
+    <div class="spaver"></div>
+    <div class="box" id="two">absolute</div>
+    <div class="box">뭐하니?</div>
+    <div class="box" id="three">fixed</div>
+    <div class="box">여기</div>
+</body>
+</html>

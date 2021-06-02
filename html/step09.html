@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+</head>
+<body>
+    <h3>폼요소 작성하기</h3>
+    <!--
+        label for ~ id는 하나의 공식
+        이는 '이메일'이라는 글을 누르면 커서가 칸 안으로 들어가는 형식을 띤다.
+        input type="email"은 모바일에서 @가 있는 키보드를 뜨게 한다.
+         input type="text"는 모바일 상에서 일반 키보드가 뜨게 한다.
+        div는 한 단락으로 받아들여 개행한다.
+    --> 
+    <form action="save.html" method="post">
+        <div>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email"/>
+        </div>
+        <div>
+        <label for="pwd">비밀번호</label>
+        <input type="password" name="pwd" id="pwd"/>
+        </div>
+        <div>
+        <button type="submit">로그인</button>
+        </div>  
+        <div>
+        <button type="reset">취소</button>
+        </div>
+    </form>
+    <!--
+        아래의 방식은 get방식이다. 
+    -->
+    <a href="save.html?id=sdhfjsdfhjkfhkf$pwd=sdffjklsdnfkdf">save</a>
+</body>
+</html>

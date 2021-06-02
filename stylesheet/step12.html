@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        #one{
+            display: none;
+        }
+        #two{
+            display: inline;
+            width: 100px;
+            height: 500px;
+            margin: 500px 10px 500px 10px;
+            padding: 100px 100px 100px 100px;
+            
+        }
+        #three{
+            display: inline-block;
+            width: 600px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>display 속성테스트</h1>
+    <button id=""showBtn> 눌러보세요</button>
+    <p id="one">:Lorem Ipsm is simply dummy text</p>
+    <hr>
+    <h1> inline vs inline-block</h1>
+    <div id="two">Lorem Ipsm is simply dummy text</div>
+    <div id="three">Lorem Ipsm is simply dummy text</div>   
+    <div>Lorem Ipsm is simply dummy text</div>   
+    <script>
+        let isOn = true;
+        document
+        .getElementById("showBtn")
+        .addEventListener("click", function(){
+            if(isOn){
+                document.getElementById("one").style.display="block"
+                isOn=false;
+            }else{
+                document.getElementById("one").style.display="inline"
+            }
+        }
+    </script>
+     <body>
+</html>
