@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatype</title>
+    <script>
+        //1. number type
+        let num1 = 10; //int
+        let num2 = 20.1; //float
+        console.log(typeof num1);
+        console.log(typeof num2);
+
+        //2. string type
+        let myname = "KIM";
+        let yourName = 'LEE';
+        console.log(typeof yourName);
+
+        //3. boolean type
+        let isRun = true;
+        let isGreater = 10>5;
+        console.log(typeof isGreater);
+
+        //4. undefined type
+        let a;
+        let b = undefined;
+        let c = a+1;
+        console.log(typeof a);
+        console.log(typeof b);
+        //undefined에 연산을 하면 값이 나오지 않음
+        console.log(c); //Nan: 
+        let c1 = a+"1";
+        console.log(c1); //undefined1
+
+        //5. null -> object로 인식
+        //null자료형은 없고 object로 인식
+        let d = null;
+        console.log(typeof d); //object
+        let e = d+1;
+        console.log(e); //1 =>null을 0로 생각
+        let e1 = d+"1";
+        console.log(e1); //null1
+
+        //값 비교: ==
+        //값과 자료형까지 비교: ===
+        //let a; --> undefined
+        //let d = null; --> null
+        console.log(a==d); //true, 변수가 없다는 의미에서 값 같음
+        console.log(a===d); //false, 하지만 자료형이 다름
+
+        //6. object type
+        const obj = {num : 1, name :'KIM', isMan : true};
+        //{key :  value, key : value} -> object
+        console.log(typeof obj); //object
+
+        //7.array type
+        const names = ["KIm", "LEE", "PARK"];
+        console.log(typeof names); //object
+        
+        //8. function type
+        //함수식
+        const f = function(){
+
+        }
+        f();
+        console.log(typeof f); //function
+        //선언적 함수
+        function sum(){
+
+        }
+        sum();
+        console.log(typeof sum); //function
+
+
+    </script>;
+</head>
+<body>
+    
+</body>
+</html>
