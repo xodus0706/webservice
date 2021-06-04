@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script>
+         //배열 생성&할당
+         const nums1 = [10,20,30,40];
+         const nums2 = new Array(10,20,30,40);
+         const nums3 = Array(10,20,30,40);
+    
+         const names = ["KIm","LEE","PARK"];
+         const random = ["아무개", 10, false];
+
+         //nums[99] = 100;
+         nums1[0] = 100;
+         nums1[1] = 200;
+         nums1[2] = 300;
+         nums1[3] = 400; 
+         //push -> 인덱스를 모르고 맨 마지막 방 뒤에 넣을 때 사용
+        nums1.push(500);//마지막 배열 넣기
+        //nums1[nums1.length] = 500;
+        
+
+        for(let i=0; i<nums1.length; i++){
+            console.log(nums1[i]);
+        }
+        console.log(nums1);
+
+        alert(nums1); 
+        //join('') -> 배열의 구분문자열을 ''으로 대체해서 문자열을 반환
+        //,를 대체할 것은 ''사이에 적는다.
+        let str = nums1.join('/');
+        alert(str);
+
+        //.pop() -> 맨 마지막 방이 없어진다.
+        nums1.pop();
+        for(let i=0; i<nums1.length; i++){
+            console.log(nums1[i]);
+        }
+
+        nums1[99] = 10000;
+        for(let i=0; i<nums1.length; i++){
+            console.log(nums1[i]);
+        }
+
+        //es6 for...of
+        for(let value of nums1){
+            console.log(value);
+        }
+
+        //es6 forEach -> 중간에 undefined값은 출력되지 않음
+        //indexr가 ++되는 형태
+        nums1.forEach(function(value, index, array){
+            console.log(index+ ","+ value +","+array );
+           console.log(array[index]);
+        });
+
+        //es6 arrow function -> 중간에 undefined값은 출력되지 않음
+        //function -> =>
+        nums1.forEach((value, index)=>{
+            console.log(value);
+        });
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>;

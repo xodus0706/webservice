@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+    <script>
+        let myName = "KIM";
+        let yourName = "LEE";
+        let msg = myName + yourName;
+        console.log(msg);
+
+        //es6에 추가된 문자열 템플릿
+        //stringformat과도 같음
+        //``개행을 하기도 함
+        let station = "을지로입구역";
+        let ourName1 = `이번 정차역은 ${station}입니다.`;
+        let ourName2 = '이번 정차역은 ' + station + '입니다.';
+        console.log(ourName1);
+        console.log(ourName2);
+
+        let a = 10;
+        let b = "10";
+        let c = "10";
+        console.log(a==b); //true
+        console.log(a===b); //false => 값은 같아도 자료형은 다름
+        if(b==c){}
+        
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
