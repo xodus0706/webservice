@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery manipulation</title>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <style>
+        div{
+            border: 5px dotted aqua;
+        }
+        p{
+            background-color: aliceblue;
+        }
+    </style>
+    <script>
+        $(function(){
+            //prependTo(appendTo)와 prepend(append) 결과값은 같고 문법만 다르다
+            $('div').prepend('<strong>hi</strong>');
+            $('<strong>hi</strong>').prependTo('div');
+
+            $('div').append('<strong>welcome</strong>');
+            $('<strong>welcome</strong>').appendTo('div');
+
+            //after과 before는 div자체 전후
+            $('div').after('<strong>sugar</strong>');
+            $('div').before('<strong>salt</strong>');
+
+            //text는 ()안에 내용을 그대로 전달
+            //$('p').text('<strong>제이쿼리</strong>');
+            //text를 그대로 가져오기
+            // alert($('p').text());
+
+            //html은 주석을 적용
+            //$('p').html('<strong>제이쿼리</strong>');
+            //alert html의 경우 text와 똑같이 나온다.
+            //alert($('p').html());
+            //해당 엘리먼트 자체를 지움
+            $('p').remove();
+            $('div').append('<p>jquery</p>');
+            //$('p').detach();
+            //해당 엘리먼트 내용을 지움
+            //$('p').empty().text('empty후 text수정');
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>jQuery</p>
+    </div>
+ 
+</body>
+</html>

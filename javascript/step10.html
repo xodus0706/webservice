@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <script>
+        function send(){
+            alert("전송");
+        }
+        alert('after title');
+
+        window.onload = function(){ //페이지가 모두 호출된 다음에 호출
+            //Event Listener 방식 (click event)
+        document.getElementById("sendBtn")
+        .addEventListener("click",function(){
+            alert('전송2');
+        });
+    
+        //Event Listener 방식 (key event)
+        document.getElementById("inputMsg")
+        .addEventListener("keydown",function(event){
+            if(event.keyCode == 13){ //13번이 enter
+                alert(documnet.getElementById("inputMsg").value);
+                documnet.getElementById("inputMsg").value = '';
+            }
+        });
+        document.getElementById("inputMsg").focus();
+        }
+
+        
+    
+    
+    </script>
+
+</head>
+<body>
+    <!--inline event-->
+    <button onclick="javascript:send();">전송1</button>
+
+    <!--listener event-->
+    <button id = "sendBtn">전송2</button>
+    <input type="text" id="inputMsg">
+    
+</body>
+
+</html>
